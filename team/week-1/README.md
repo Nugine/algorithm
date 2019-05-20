@@ -72,3 +72,9 @@ TODO: 补上解析
 莫队
 
 神奇莫队第一课。因为 `Ai` 属于区间 `[1, 1e6]`，可以`O(1)`映射到个数，所以区间`[l,r]`可以直接转移到邻近区间，满足莫队所需性质。莫队标准`sqrt(n)`分块排序，降低转移次数，完成所有询问，将答案填入询问的对应位置，最后依次输出。
+
+[BZOJ-2038](https://www.lydsy.com/JudgeOnline/problem.php?id=2038)
+
+莫队，组合数学
+
+<http://foreseeable97.logdown.com/posts/158522-233333>
