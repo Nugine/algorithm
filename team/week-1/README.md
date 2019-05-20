@@ -78,3 +78,10 @@ TODO: 补上解析
 莫队，组合数学
 
 <http://foreseeable97.logdown.com/posts/158522-233333>
+
+[CodeForces - 86D](http://codeforces.com/problemset/problem/86/D)
+
+莫队
+
+标准莫队，写个区间转移函数就行了。每次添加或移除元素时，同步修改`k[s]`，并计算 power 的改变量。
+区间转移函数需要充分优化常数，否则可能产生巨大的时间差距。
