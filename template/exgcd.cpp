@@ -10,17 +10,31 @@ ll gcd(ll a, ll b) {
     return b;
 }
 
-ll exgcd(ll a, ll b, ll &x, ll &y) {
-    ll q = a / b, t = a % b;
-    ll x0 = 1, y0 = 0, x1 = 0, y1 = 1;
+ll exgcd(const ll a, const ll b, ll &x, ll &y) {
+    ll c, d, q, t, x0, y0, x1, y1, temp;
+    c = a, d = b, q = a / b, t = a % b, x0 = 1, y0 = 0, x1 = 0, y1 = 1;
     while (t) {
-        a = b;
-        b = t;
-        q = a / b;
-        t = x0, x0 = x1, x1 = t - q * x1;
-        t = y0, y0 = y1, y1 = t - q * y1;
-        t = a % b;
+        temp = x0, x0 = x1, x1 = temp - q * x1;
+        temp = y0, y0 = y1, y1 = temp - q * y1;
+        c = d;
+        d = t;
+        q = c / d;
+        t = c % d;
     }
     x = x1, y = y1;
-    return b;
+    return d;
 }
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     ll a, b, x, y;
+//     ll ans;
+//     while (cin >> a >> b) {
+//         ans = exgcd(a, b, x, y);
+//         if (ans != (a * x + b * y) || ans != gcd(a, b)) {
+//             cout << "WA" << endl;
+//         }
+//         cout << ans << " " << x << " " << y << endl;
+//     }
+// }
