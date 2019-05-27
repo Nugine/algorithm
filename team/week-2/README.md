@@ -43,3 +43,9 @@ TODO: [BZOJ-3674](https://www.lydsy.com/JudgeOnline/problem.php?id=3674)
 <https://blog.csdn.net/qq_42112677/article/details/81099959>
 
 <https://blog.csdn.net/Diogenes_/article/details/80392170>
+
+## 跳舞链
+
+TODO: <https://blog.csdn.net/whereisherofrom/article/details/79220897>
+
+<del>看起来过于牛逼，于是列为todo</del>
