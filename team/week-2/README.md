@@ -57,3 +57,11 @@ TODO: <https://blog.csdn.net/whereisherofrom/article/details/79220897>
 莫队
 
 标准莫队，维护一个`cnt`数组，保存区间内各数字的出现个数，`add`和`remove`函数计算一下`delta`，加到`ans`上，就这么多。
+
+[洛谷 P1903](https://www.luogu.org/problemnew/show/P1903)，[BZOJ-2120](https://www.lydsy.com/JudgeOnline/problem.php?id=2120)
+
+带修莫队
+
+<https://www.cnblogs.com/ouuan/p/MoDuiTutorial.html>
+
+在标准莫队的基础上加一维时间轴，如果当前点与查询点在时间轴上有距离，则要不断执行/撤销修改操作，直到到达修改完成后的时间点。
