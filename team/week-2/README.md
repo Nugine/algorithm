@@ -31,3 +31,15 @@
 压缩路径时，把距离加起来模3。合并集合时，如果是同类，偏移量为0，如果是捕食关系，偏移量为1，即被合并的结点要比合并到的结点在环上右移一位。
 
 方程 `0 + x.rank + offset ≡ ry.rank + y.rank (%3)`
+
+TODO: [BZOJ-3674](https://www.lydsy.com/JudgeOnline/problem.php?id=3674)
+
+可持久化并查集
+
+<del>可持久化要练好些题呢，我还不会</del>
+
+<http://hzwer.com/3997.html>
+
+<https://blog.csdn.net/qq_42112677/article/details/81099959>
+
+<https://blog.csdn.net/Diogenes_/article/details/80392170>
