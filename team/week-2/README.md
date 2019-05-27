@@ -49,3 +49,11 @@ TODO: [BZOJ-3674](https://www.lydsy.com/JudgeOnline/problem.php?id=3674)
 TODO: <https://blog.csdn.net/whereisherofrom/article/details/79220897>
 
 <del>看起来过于牛逼，于是列为todo</del>
+
+## 莫队
+
+[洛谷 P2709](https://www.luogu.org/problemnew/show/P2709)
+
+莫队
+
+标准莫队，维护一个`cnt`数组，保存区间内各数字的出现个数，`add`和`remove`函数计算一下`delta`，加到`ans`上，就这么多。
