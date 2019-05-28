@@ -65,3 +65,9 @@ TODO: <https://blog.csdn.net/whereisherofrom/article/details/79220897>
 <https://www.cnblogs.com/ouuan/p/MoDuiTutorial.html>
 
 在标准莫队的基础上加一维时间轴，如果当前点与查询点在时间轴上有距离，则要不断执行/撤销修改操作，直到到达修改完成后的时间点。
+
+[BZOJ-4241](https://www.lydsy.com/JudgeOnline/problem.php?id=4241)
+
+回滚莫队
+
+<https://blog.csdn.net/qq_33330876/article/details/73522230>
