@@ -53,7 +53,7 @@ void BInt_add(BInt &dst, const BInt &lhs, const BInt &rhs) {
     }
 }
 
-// assert: self >= rhs
+// assert: lhs >= rhs
 void BInt_minus(BInt &dst, const BInt &lhs, const BInt &rhs) {
     int i;
     int carry = 0;
