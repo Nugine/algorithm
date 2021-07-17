@@ -2,7 +2,7 @@ test name case:
 	#!/bin/bash
 	cd {{invocation_directory()}}
 	set -ex
-	g++ {{name}}.cpp -std=c++11 -o {{name}}
+	g++ {{name}}.cpp -std=c++11 -o {{name}} -Wall
 	cat {{name}}.{{case}}.in
 	cat {{name}}.{{case}}.out
 	./{{name}} < {{name}}.{{case}}.in > out
