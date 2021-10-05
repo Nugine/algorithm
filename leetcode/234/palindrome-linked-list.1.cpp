@@ -1,3 +1,6 @@
+// https://leetcode-cn.com/problems/palindrome-linked-list/
+// https://leetcode-cn.com/problems/aMhZSa/
+
 struct ListNode {
     int val;
     ListNode *next;
