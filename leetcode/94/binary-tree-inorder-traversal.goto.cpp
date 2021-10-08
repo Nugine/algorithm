@@ -21,8 +21,8 @@ class Solution {
         if (root == nullptr) {
             return ans;
         }
-        vector<TreeNode *> stk;
-        stk.push_back(root);
+       
+        vector<TreeNode *> stk{root};
         TreeNode *popped = nullptr;
 
         while (!stk.empty()) {
