@@ -13,22 +13,22 @@ struct TreeNode {
         : val(x), left(left), right(right) {}
 };
 
-void post_dfs(TreeNode &root, vector<int> &out) {
-    if (root.left != nullptr) {
-        post_dfs(*root.left, out);
-    }
-    if (root.right != nullptr) {
-        post_dfs(*root.right, out);
-    }
-    out.push_back(root.val);
-}
-
 class Solution {
   public:
+    void _postorderTraversal(TreeNode &root, vector<int> &ans) {
+        if (root.left) {
+            _postorderTraversal(*root.left, ans);
+        }
+        if (root.right) {
+            _postorderTraversal(*root.right, ans);
+        }
+        ans.push_back(root.val);
+    }
+
     vector<int> postorderTraversal(TreeNode *root) {
         vector<int> ans;
-        if (root != nullptr) {
-            post_dfs(*root, ans);
+        if (root) {
+            _postorderTraversal(*root, ans);
         }
         return ans;
     }

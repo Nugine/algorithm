@@ -18,27 +18,37 @@ class Solution {
   public:
     vector<int> postorderTraversal(TreeNode *root) {
         vector<int> ans;
-
         if (root == nullptr) {
             return ans;
         }
 
-        vector<TreeNode *> stk;
-        stk.push_back(root);
-
+        vector<TreeNode *> stk{root};
         TreeNode *popped = nullptr;
 
         while (!stk.empty()) {
             TreeNode *cur = stk.back();
-            if (popped == nullptr && cur->left) {
+
+            if (popped == nullptr) {
+                goto state1;
+            } else if (popped == cur->left) {
+                goto state2;
+            } else {
+                goto state3;
+            }
+
+        state1:
+            if (cur->left) {
                 stk.push_back(cur->left);
+                popped = nullptr;
                 continue;
             }
-            if (popped == cur->left && cur->right) {
+        state2:
+            if (cur->right) {
                 stk.push_back(cur->right);
                 popped = nullptr;
                 continue;
             }
+        state3:
             ans.push_back(cur->val);
             stk.pop_back();
             popped = cur;
