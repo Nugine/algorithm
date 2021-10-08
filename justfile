@@ -12,7 +12,9 @@ leetcode no name url:
 	#!/bin/bash
 	set -ex
 	cd {{justfile_directory()}}
-	mkdir leetcode/{{no}}
-	cat > leetcode/{{no}}/{{name}}.cpp << EOF
+	mkdir -p leetcode/{{no}}
+	F=leetcode/{{no}}/{{name}}.cpp
+	cat > $F << EOF
 	// {{url}}
 	EOF
+	code $F
