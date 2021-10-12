@@ -13,11 +13,15 @@ typedef unsigned long long ull;
 #define eprintf(...) fprintf(stderr, __VA_ARGS__)
 // #define eprintf(...)
 
+struct Solution {
+    void run() {}
+};
+
 int main() {
     cin.sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    // static Sol sol;
-    // sol.run();
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    static Solution s;
+    s.run();
     return 0;
 }
