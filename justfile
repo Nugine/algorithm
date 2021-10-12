@@ -6,7 +6,7 @@ test name case:
 	cat {{name}}.{{case}}.out
 	./{{name}} < {{name}}.{{case}}.in > out
 	ojcmp normal -u out -s {{name}}.{{case}}.out
-	diff --strip-trailing-cr out {{name}}.{{case}}.out
+	diff -Z --strip-trailing-cr out {{name}}.{{case}}.out
 	echo "AC"
 
 leetcode no name url:
