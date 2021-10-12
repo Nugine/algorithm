@@ -19,12 +19,16 @@ leetcode no name url:
 	EOF
 	code $F
 
-luogu no:
+luogu no url:
 	#!/bin/bash -ex
 	cd {{justfile_directory()}}
 	mkdir -p luogu/{{no}}
 	A=luogu/{{no}}/{{no}}.cpp
-	cp templates/common.h $A
+	cat > $A << EOF
+	// {{url}}
+
+	EOF
+	cat templates/common.h >> $A
 	B=luogu/{{no}}/{{no}}.1.in
 	C=luogu/{{no}}/{{no}}.1.out
 	code $A $B $C
