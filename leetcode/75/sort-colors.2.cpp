@@ -16,29 +16,21 @@ class Solution {
             return;
         }
 
-        constexpr int M = 4;
-        int p[M] = {0, 0, 0, 0};
-        int i = 0;
-        while (i < n) {
-            for (int m = 0; m < M; ++m) {
-                if (m > 0 && p[m - 1] > p[m]) {
-                    p[m] = p[m - 1];
-                }
-                if (a[i] == m) {
-                    swap(a[i], a[p[m]]);
-                    p[m] += 1;
-                    if (p[m] > i) {
-                        i = p[m];
-                    }
-                    break;
-                }
-            }
+        int bucket[3] = {0, 0, 0};
+        for (int i = 0; i < n; ++i) {
+            bucket[a[i]] += 1;
+        }
+        int top = 0;
+        for (int i = 0; i < 3; ++i) {
+            int cnt = bucket[i];
+            fill(a + top, a + top + cnt, i);
+            top += cnt;
         }
     }
 };
 
 int main() {
-    vector<int> nums = {3, 2, 1, 0};
+    vector<int> nums = {2, 1, 0};
     auto sol = Solution();
     sol.sortColors(nums);
     for (auto x : nums) {
