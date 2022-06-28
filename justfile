@@ -4,6 +4,7 @@ leetcode problem name url:
     mkdir -p leetcode/{{problem}}
     F=leetcode/{{problem}}/{{name}}.cpp
     cat > $F << EOF
+    // {{problem}}
     // {{url}}
     #ifdef LEETCODE_LOCAL
     #include "leetcode.h"
