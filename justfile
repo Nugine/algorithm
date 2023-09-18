@@ -1,11 +1,11 @@
-leetcode problem name url:
+leetcode no problem name:
     #!/bin/bash -ex
     cd {{justfile_directory()}}
-    mkdir -p leetcode/{{problem}}
-    F=leetcode/{{problem}}/{{name}}.cpp
+    mkdir -p leetcode/{{no}}-{{problem}}
+    F=leetcode/{{no}}-{{problem}}/{{name}}.cpp
     cat > $F << EOF
-    // {{problem}}
-    // {{url}}
+    // {{no}} {{problem}}
+    // https://leetcode.cn/problems/{{problem}}
     #ifdef LEETCODE_LOCAL
     #include "leetcode.h"
     #endif
