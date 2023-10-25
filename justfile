@@ -1,16 +1,16 @@
 leetcode no problem name:
     #!/bin/bash -ex
     cd {{justfile_directory()}}
-    mkdir -p leetcode/{{no}}-{{problem}}
-    F=leetcode/{{no}}-{{problem}}/{{name}}.cpp
-    cat > $F << EOF
+    mkdir -p "leetcode/{{no}} {{problem}}"
+    F="leetcode/{{no}} {{problem}}/{{name}}.cpp"
+    cat > "$F" << EOF
     // {{no}} {{problem}}
     // https://leetcode.cn/problems/{{problem}}
     #ifdef LEETCODE_LOCAL
     #include "leetcode.h"
     #endif
     EOF
-    code $F
+    code "$F"
 
 cpp name input:
     #!/bin/bash -ex
