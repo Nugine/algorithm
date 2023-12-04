@@ -17,5 +17,10 @@ cpp name input:
     cd "{{invocation_directory()}}"
     mkdir -p target
     g++ {{name}}.cpp -Wall -Wextra -o target/{{name}}
-    ./target/{{name}} < {{input}}.in | tee target/{{name}}.out
-    diff {{input}}.out target/{{name}}.out
+    OUT=target/{{name}}.{{input}}.out
+    ./target/{{name}} < {{input}}.in | tee $OUT
+    diff {{input}}.out $OUT
+
+clean:
+    #!/bin/bash -ex
+    fd -I -t d target | xargs rm -rf
