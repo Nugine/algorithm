@@ -42,9 +42,12 @@ void kmp() {
     int i, j;
     j = 0;
     rng(i, 0, n) {
+        eprintf("i=%d, j=%d\n", i, j);
         while (j > 0 && P[j] != T[i]) {
+            eprintf("j := pi[j-1] = pi[%d-1] = %d\n", j, pi[j - 1]);
             j = pi[j - 1];
         }
+        eprintf("cmp P[%d] T[%d]\n", j, i);
         if (P[j] == T[i]) {
             j += 1;
         }
